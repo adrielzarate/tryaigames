@@ -112,7 +112,7 @@ export function Gallery({
             <input
               id="search"
               type="search"
-              placeholder="Search games..."
+              placeholder="Search"
               value={query}
               onChange={(e) => {
                 setQuery(e.target.value);
