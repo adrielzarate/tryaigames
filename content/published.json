@@ -2,7 +2,8 @@
   "version": 1,
   "categories": [
     "Other",
-    "Adventure"
+    "Adventure",
+    "Racing"
   ],
   "projects": [
     {
@@ -34,6 +35,36 @@
         }
       ],
       "review": "<p><strong>The Little Prince Among the Stars</strong> takes us on a journey through eight tiny planets inspired by the world of <em>The Little Prince</em>. Don't expect big challenges or action-packed gameplay: the real charm lies in wandering through its environments, discovering hidden corners, and soaking up its magical, nostalgic atmosphere. And here's the surprising part: this entire little universe was created in just 16 days with the help of AI. A simple experience with plenty of personality, and one that's definitely worth exploring, even if just for a few minutes.</p>"
+    },
+    {
+      "id": "14aa804f-97f8-44ee-a730-ae30e96d2db8",
+      "title": "Lost Marbles",
+      "url": "https://meticulai.com/games/lost-marbles/",
+      "developer": "Meticulai Games",
+      "developerUrl": "https://x.com/MeticulAi",
+      "publishedAt": "2026-10-17T21:20:00.000Z",
+      "categories": [
+        "Racing"
+      ],
+      "desktop": {
+        "file": "939de182-fa9d-4167-83d3-d4e71f8f4b98.webp",
+        "alt": "Lost Marbles homepage"
+      },
+      "mobile": {
+        "file": "058f965f-3e40-4d52-a82b-0f46abfe3e1e.webp",
+        "alt": "Lost Marbles homepage"
+      },
+      "gallery": [
+        {
+          "file": "4006f730-60da-4db2-acfa-097f688d06af.webp",
+          "alt": "Lost Marbles in game"
+        },
+        {
+          "file": "0797e05e-2f28-4fa8-aafe-dd515d47733c.webp",
+          "alt": "Starting a game in Lost Marbles"
+        }
+      ],
+      "review": "<p><strong>Lost Marbles </strong>throws you into a chaotic race where up to 50 marbles compete to be the last one rolling. Navigate tricky tracks, dodge obstacles, and grab upgrades to stay ahead of the competition. With each round eliminating the slowest racers, things get more intense as you get closer to the finish line. It's a fun, fast-paced experience that's easy to jump into, but winning is a whole different story!</p>"
     }
   ]
 }
