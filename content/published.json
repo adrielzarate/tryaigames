@@ -126,6 +126,36 @@
         }
       ],
       "review": "<p>Inspired by Tesla's jaw-dropping Roadster reveal, this playful 3D experience brings the car's gravity-defying stunts straight to your browser. Watch the Roadster race up a massive ramp, flip through the air, and land on its wheels with the help of rocket-like thrusters. A fun little tribute to one of Tesla's wildest demonstrations, recreated in an interactive digital playground.</p>"
+    },
+    {
+      "id": "fae55df2-a3fc-40ec-9729-21eecb3c298c",
+      "title": "Chinese Garden",
+      "url": "https://felixtrz.github.io/chinese-garden/",
+      "developer": "Felix Z",
+      "developerUrl": "https://x.com/felix_trz",
+      "publishedAt": "2026-10-17T18:44:00.000Z",
+      "categories": [
+        "Interactive 3D"
+      ],
+      "desktop": {
+        "file": "c5ca00a0-e6bd-47fd-81f2-0aa4f04e5609.webp",
+        "alt": "A Chinese Garden"
+      },
+      "mobile": {
+        "file": "b9c46d69-5f56-4ecb-a506-7e8ee7466e3a.webp",
+        "alt": "A Chinese Garden"
+      },
+      "gallery": [
+        {
+          "file": "054cef1b-7679-4db0-8445-7e0522ec61c8.webp",
+          "alt": "A small lake with fish"
+        },
+        {
+          "file": "a7beb28b-c283-448f-901c-cf6fa6fa69a3.webp",
+          "alt": "A picture from a bridge"
+        }
+      ],
+      "review": "<p><strong>Chinese Garden</strong> is a delightful little escape into a world of tranquility and traditional Chinese beauty. Wander through a charming 3D garden where nature and architecture come together to create a wonderfully peaceful atmosphere. No missions, no ticking clocks, no pressure — just the simple pleasure of exploring a beautiful virtual space at your own pace. It's the kind of experience that reminds you that sometimes, the best thing a digital world can offer is a quiet moment to get lost in.</p>"
     }
   ]
 }
