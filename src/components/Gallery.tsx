@@ -151,7 +151,7 @@ export function Gallery({
         )}
       </main>
       <footer className="site-footer">
-        {new Date().getFullYear()}. Created with &lt;3 by{" "}
+        {new Date().getFullYear()}. Created with ❤️ by{" "}
         <ExternalLink href="https://adrielz.world">Adriel</ExternalLink>
       </footer>
       {review && (
