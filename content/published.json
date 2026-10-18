@@ -3,7 +3,8 @@
   "categories": [
     "Other",
     "Adventure",
-    "Racing"
+    "Racing",
+    "Interactive 3D"
   ],
   "projects": [
     {
@@ -65,6 +66,36 @@
         }
       ],
       "review": "<p><strong>Lost Marbles </strong>throws you into a chaotic race where up to 50 marbles compete to be the last one rolling. Navigate tricky tracks, dodge obstacles, and grab upgrades to stay ahead of the competition. With each round eliminating the slowest racers, things get more intense as you get closer to the finish line. It's a fun, fast-paced experience that's easy to jump into, but winning is a whole different story!</p>"
+    },
+    {
+      "id": "ece1ac8c-9c7e-4201-ae5a-9aeaf6746a5f",
+      "title": "The Shipwright",
+      "url": "https://april-zhu.com/shipwright",
+      "developer": "April",
+      "developerUrl": "https://x.com/Aprilzz423",
+      "publishedAt": "2026-10-15T15:00:00.000Z",
+      "categories": [
+        "Interactive 3D"
+      ],
+      "desktop": {
+        "file": "69d27b83-754f-4aca-bfaa-479ecdbd53aa.webp",
+        "alt": "The Shipwright UI"
+      },
+      "mobile": {
+        "file": "73f4d856-bf17-4701-afd9-c7851b3a4e11.webp",
+        "alt": "A ship from The Shipwright"
+      },
+      "gallery": [
+        {
+          "file": "7f9a18a6-904e-4bfe-83ac-4c5e312a84da.webp",
+          "alt": "Playing with colors in The Shipwright"
+        },
+        {
+          "file": "0a40ed08-c84d-449e-bd6e-741693d482bd.webp",
+          "alt": "The Shipwright full UI"
+        }
+      ],
+      "review": "<p><strong>The Shipwright</strong> is a charming interactive 3D experience that turns shipbuilding into a playful exercise in creativity. Rather than following traditional game mechanics, it invites you to experiment with shapes, colors, materials, and details to design your own unique vessel. Watching your creation take shape in real time makes the process surprisingly satisfying, while the atmospheric ocean setting adds an extra layer of immersion. With its polished visuals and intuitive customization tools, The Shipwright feels like a delightful little digital playground where curiosity and creativity take the helm.</p>"
     }
   ]
 }
