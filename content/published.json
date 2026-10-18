@@ -96,6 +96,36 @@
         }
       ],
       "review": "<p><strong>The Shipwright</strong> is a charming interactive 3D experience that turns shipbuilding into a playful exercise in creativity. Rather than following traditional game mechanics, it invites you to experiment with shapes, colors, materials, and details to design your own unique vessel. Watching your creation take shape in real time makes the process surprisingly satisfying, while the atmospheric ocean setting adds an extra layer of immersion. With its polished visuals and intuitive customization tools, The Shipwright feels like a delightful little digital playground where curiosity and creativity take the helm.</p>"
+    },
+    {
+      "id": "74bec879-191a-4392-a886-56aec6b0a324",
+      "title": "Roadster",
+      "url": "https://t.co/dfXytTHyA7",
+      "developer": "Felix Z",
+      "developerUrl": "https://x.com/felix_trz",
+      "publishedAt": "2026-10-18T16:30:00.000Z",
+      "categories": [
+        "Interactive 3D"
+      ],
+      "desktop": {
+        "file": "80873e6f-8907-46c0-af40-b04cc8d514c5.webp",
+        "alt": "Roadster home page"
+      },
+      "mobile": {
+        "file": "7f48c595-03af-4ef4-8173-0e4364a97384.webp",
+        "alt": "Roadster home page"
+      },
+      "gallery": [
+        {
+          "file": "19396187-6931-4fc9-bc1d-e27420304ee3.webp",
+          "alt": "Roadster car going up"
+        },
+        {
+          "file": "39261eda-acc2-4a5a-8daf-0aefb44eaf78.webp",
+          "alt": "Roadster car from behind"
+        }
+      ],
+      "review": "<p>Inspired by Tesla's jaw-dropping Roadster reveal, this playful 3D experience brings the car's gravity-defying stunts straight to your browser. Watch the Roadster race up a massive ramp, flip through the air, and land on its wheels with the help of rocket-like thrusters. A fun little tribute to one of Tesla's wildest demonstrations, recreated in an interactive digital playground.</p>"
     }
   ]
 }
