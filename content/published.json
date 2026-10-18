@@ -1,1 +1,39 @@
-{"version":1,"categories":["Other"],"projects":[]}
+{
+  "version": 1,
+  "categories": [
+    "Other",
+    "Adventure"
+  ],
+  "projects": [
+    {
+      "id": "6cf43db0-be75-426e-88b7-d9682a345750",
+      "title": "The Little Prince - Among the Stars",
+      "url": "https://littleprince.dev/",
+      "developer": "Sac",
+      "developerUrl": "https://x.com/Saccc_c",
+      "publishedAt": "2026-10-13T11:00:00.000Z",
+      "categories": [
+        "Adventure"
+      ],
+      "desktop": {
+        "file": "cf56d1b3-bc5e-4d5e-971b-e6ed88a07c41.webp",
+        "alt": "The Little Prince - Among the Stars"
+      },
+      "mobile": {
+        "file": "f8c0d453-c1c5-4942-b8d2-1164dad4a749.webp",
+        "alt": "The Little Prince - Among the Stars"
+      },
+      "gallery": [
+        {
+          "file": "ce18ca65-2304-4fbe-bca4-5add638cad82.webp",
+          "alt": "The Little Prince sitting facing the sunset"
+        },
+        {
+          "file": "5f2e6b3a-ef9d-43d2-bd90-f60d7f06eca3.webp",
+          "alt": "The Little Prince watering a rose"
+        }
+      ],
+      "review": "<p><strong>The Little Prince Among the Stars</strong> takes us on a journey through eight tiny planets inspired by the world of <em>The Little Prince</em>. Don't expect big challenges or action-packed gameplay: the real charm lies in wandering through its environments, discovering hidden corners, and soaking up its magical, nostalgic atmosphere. And here's the surprising part: this entire little universe was created in just 16 days with the help of AI. A simple experience with plenty of personality, and one that's definitely worth exploring, even if just for a few minutes.</p>"
+    }
+  ]
+}
