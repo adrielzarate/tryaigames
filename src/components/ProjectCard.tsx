@@ -1,0 +1,72 @@
+import { useSyncExternalStore } from "react";
+import type { Project } from "../lib/model";
+import { imageUrl } from "../lib/model";
+import { ExternalLink } from "./ExternalLink";
+export function ProjectCard({
+  project: p,
+  onReview,
+  onEdit,
+}: {
+  project: Project;
+  onReview: () => void;
+  onEdit?: () => void;
+}) {
+  const mobile = useSyncExternalStore(
+    (callback) => {
+      const media = window.matchMedia("(max-width: 767px)");
+      media.addEventListener("change", callback);
+      return () => media.removeEventListener("change", callback);
+    },
+    () => window.matchMedia("(max-width: 767px)").matches,
+    () => false,
+  );
+  return (
+    <article className="project-card min-w-0">
+      <div className="card-visual">
+        <ExternalLink
+          className="project-link"
+          href={p.url}
+          aria-label={`GO ${p.title} (opens in a new tab)`}
+        >
+          <picture>
+            <source media="(max-width: 767px)" srcSet={imageUrl(p.mobile)} />
+            <img
+              src={imageUrl(p.desktop)}
+              alt={mobile ? p.mobile.alt : p.desktop.alt}
+              loading="lazy"
+              decoding="async"
+              onError={(e) => {
+                e.currentTarget.classList.add("image-unavailable");
+              }}
+            />
+          </picture>
+          <span className="go" aria-hidden="true">
+            GO <span>↗</span>
+          </span>
+          <h2>{p.title}</h2>
+        </ExternalLink>
+        {onEdit && (
+          <button
+            className="button edit-button"
+            onClick={onEdit}
+            aria-label={`Edit ${p.title}`}
+          >
+            Edit
+          </button>
+        )}
+      </div>
+      <div className="card-meta">
+        <p>
+          By <ExternalLink href={p.developerUrl}>{p.developer}</ExternalLink>
+        </p>
+        <button
+          className="review-button"
+          onClick={onReview}
+          aria-label={`Read review of ${p.title}`}
+        >
+          Read review <span aria-hidden="true">→</span>
+        </button>
+      </div>
+    </article>
+  );
+}
