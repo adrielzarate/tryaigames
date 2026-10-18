@@ -568,6 +568,10 @@ input[type="range"] {
   .brand-logo {
     width: 100%;
   }
+  .brand p span {
+    display: block;
+    white-space: nowrap;
+  }
   .brand p {
     font-size: clamp(9px, 2.3vw, 14px);
     max-width: 38%;

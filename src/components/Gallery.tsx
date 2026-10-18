@@ -66,7 +66,10 @@ export function Gallery({
               height={59}
             />
           </h1>
-          <p>A curated list of AI Games &amp; Experiences</p>
+          <p>
+            <span>A curated list of</span>{" "}
+            <span>AI Games &amp; Experiences</span>
+          </p>
         </div>
         <div className="discovery">
           {categories.length >= 3 && (
