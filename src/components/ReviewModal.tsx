@@ -6,9 +6,11 @@ import { ExternalLink } from "./ExternalLink";
 export function ReviewModal({
   project: p,
   onClose,
+  onVisit,
 }: {
   project: Project;
   onClose: () => void;
+  onVisit?: (destination: "project" | "developer", source: string) => void;
 }) {
   const images = [p.desktop, ...p.gallery];
   const [selected, setSelected] = useState(0);
@@ -27,11 +29,21 @@ export function ReviewModal({
       <header className="modal-header">
         <div>
           <h2>
-            <ExternalLink href={p.url}>{p.title}</ExternalLink>
+            <ExternalLink
+              href={p.url}
+              onClick={() => onVisit?.("project", "review_title")}
+            >
+              {p.title}
+            </ExternalLink>
           </h2>
           <p>
             Created by{" "}
-            <ExternalLink href={p.developerUrl}>{p.developer}</ExternalLink>
+            <ExternalLink
+              href={p.developerUrl}
+              onClick={() => onVisit?.("developer", "review")}
+            >
+              {p.developer}
+            </ExternalLink>
           </p>
         </div>
         <button className="button" onClick={onClose} autoFocus>
@@ -72,7 +84,11 @@ export function ReviewModal({
         ))}
       </ul>
       <div className="modal-actions">
-        <ExternalLink className="button button-mint" href={p.url}>
+        <ExternalLink
+          className="button button-mint"
+          href={p.url}
+          onClick={() => onVisit?.("project", "review_try_it")}
+        >
           Try it! <span aria-hidden="true">↗</span>
         </ExternalLink>
       </div>

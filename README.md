@@ -50,3 +50,7 @@ The scripts in `scripts/` are build tools and are not deployed. Only images refe
 - Horizontally scrollable image thumbnails on mobile.
 - External links that open in a new tab.
 - Visible keyboard focus, semantic HTML, and image alternative text.
+
+## Analytics
+
+The site includes optional Google Analytics with visitor consent controls. See [analytics setup and verification](docs/analytics.md) for configuration and measured events.

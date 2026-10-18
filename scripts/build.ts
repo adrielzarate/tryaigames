@@ -1,7 +1,8 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
-import { build } from "vite";
+import { build, loadEnv } from "vite";
+import { analyticsConfig } from "../src/lib/analytics-config.ts";
 import react from "@vitejs/plugin-react";
 import tailwind from "@tailwindcss/vite";
 import { contentPlugin } from "./content-plugin.ts";
@@ -11,6 +12,7 @@ export async function prepareSiteBuild(
   content?: Content,
   sourceAssets?: string,
 ) {
+  analyticsConfig({ ...loadEnv("production", root, "VITE_"), ...process.env });
   const snapshot = ContentSchema.parse(
     content ?? JSON.parse(await fs.readFile(published, "utf8")),
   );

@@ -6,10 +6,12 @@ export function ProjectCard({
   project: p,
   onReview,
   onEdit,
+  onVisit,
 }: {
   project: Project;
   onReview: () => void;
   onEdit?: () => void;
+  onVisit?: (destination: "project" | "developer") => void;
 }) {
   const mobile = useSyncExternalStore(
     (callback) => {
@@ -26,6 +28,7 @@ export function ProjectCard({
         <ExternalLink
           className="project-link"
           href={p.url}
+          onClick={() => onVisit?.("project")}
           aria-label={`GO ${p.title} (opens in a new tab)`}
         >
           <picture>
@@ -57,7 +60,13 @@ export function ProjectCard({
       </div>
       <div className="card-meta">
         <p>
-          By <ExternalLink href={p.developerUrl}>{p.developer}</ExternalLink>
+          By{" "}
+          <ExternalLink
+            href={p.developerUrl}
+            onClick={() => onVisit?.("developer")}
+          >
+            {p.developer}
+          </ExternalLink>
         </p>
         <button
           className="review-button"

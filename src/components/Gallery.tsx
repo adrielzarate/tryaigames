@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import {
   selectProjects,
   usedCategories,
@@ -8,6 +8,7 @@ import {
 import { ProjectCard } from "./ProjectCard";
 import { ReviewModal } from "./ReviewModal";
 import { ExternalLink } from "./ExternalLink";
+import type { AnalyticsEvent } from "../lib/analytics";
 const colors = [
   "#213643",
   "#258AE0",
@@ -21,11 +22,15 @@ export function Gallery({
   onEdit,
   onAdd,
   toolbar,
+  footerExtra,
+  onEvent,
 }: {
   content: Content;
   onEdit?: (p: Project) => void;
   onAdd?: () => void;
   toolbar?: ReactNode;
+  footerExtra?: ReactNode;
+  onEvent?: AnalyticsEvent;
 }) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("All");
@@ -33,6 +38,14 @@ export function Gallery({
   const categories = usedCategories(content);
   const active = categories.includes(category) ? category : "All";
   const projects = selectProjects(content.projects, query, active);
+  useEffect(() => {
+    if (!query.trim() || !onEvent) return;
+    const timer = window.setTimeout(
+      () => onEvent("gallery_search", { result_count: projects.length }),
+      650,
+    );
+    return () => window.clearTimeout(timer);
+  }, [query, projects.length, onEvent]);
   return (
     <div className={`site-shell ${onEdit ? "is-editor" : ""}`}>
       <a href="#projects" className="skip-link">
@@ -58,6 +71,7 @@ export function Gallery({
                   onClick={() => {
                     setQuery("");
                     setCategory(c);
+                    onEvent?.("category_select", { category: c });
                   }}
                 >
                   {i > 0 && (
@@ -108,7 +122,18 @@ export function Gallery({
             <ProjectCard
               key={p.id}
               project={p}
-              onReview={() => setReview(p)}
+              onReview={() => {
+                setReview(p);
+                onEvent?.("review_open", { project_id: p.id });
+              }}
+              onVisit={(destination) =>
+                onEvent?.(
+                  destination === "project"
+                    ? "project_visit"
+                    : "developer_visit",
+                  { project_id: p.id, source: "gallery" },
+                )
+              }
               onEdit={onEdit ? () => onEdit(p) : undefined}
             />
           ))}
@@ -153,12 +178,19 @@ export function Gallery({
       <footer className="site-footer">
         {new Date().getFullYear()}. Created with ❤️ by{" "}
         <ExternalLink href="https://adrielz.world">Adriel</ExternalLink>
+        {footerExtra}
       </footer>
       {review && (
         <ReviewModal
           key={review.id}
           project={review}
           onClose={() => setReview(null)}
+          onVisit={(destination, source) =>
+            onEvent?.(
+              destination === "project" ? "project_visit" : "developer_visit",
+              { project_id: review.id, source },
+            )
+          }
         />
       )}
       {toolbar}

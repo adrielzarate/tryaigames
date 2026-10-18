@@ -691,3 +691,68 @@ input[type="range"] {
     scroll-behavior: auto !important;
   }
 }
+
+/* Optional production analytics controls. */
+.analytics-settings {
+  display: block;
+  margin: 12px auto 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  min-height: 36px;
+  font-size: 12px;
+}
+.analytics-banner {
+  position: fixed;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 8;
+  width: min(900px, calc(100% - 36px));
+  padding: 20px;
+  border: 1.5px solid var(--color-ink);
+  border-radius: 9px;
+  background: white;
+  box-shadow: 5px 5px 0 var(--color-ink);
+  text-align: left;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.analytics-banner h2 {
+  font-size: 17px;
+  font-weight: 900;
+  margin-bottom: 7px;
+}
+.analytics-banner p {
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 650;
+}
+.analytics-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+.analytics-banner .analytics-actions {
+  margin: 0;
+  flex: none;
+  flex-direction: column;
+}
+@media (max-width: 767px) {
+  .analytics-banner {
+    display: block;
+    bottom: 12px;
+    padding: 16px;
+    max-height: calc(100svh - 40px);
+    overflow-y: auto;
+  }
+  .analytics-banner .analytics-actions {
+    flex-direction: row;
+    margin-top: 16px;
+  }
+  .analytics-actions .button {
+    flex: 1;
+  }
+}
