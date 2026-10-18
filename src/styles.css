@@ -274,17 +274,23 @@ input[type="range"] {
   text-underline-offset: 2px;
 }
 .review-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35em;
   flex: none;
   text-align: left;
   font-weight: 900;
   white-space: nowrap;
   min-height: 30px;
 }
-.review-button span {
+.arrow-icon {
+  display: block;
+  width: 1.2em;
+  height: 1.2em;
+  flex: none;
+}
+.review-button .arrow-icon {
   color: #ba119f;
-  font-size: 22px;
-  vertical-align: -1px;
-  margin-left: 3px;
 }
 .review-button:hover {
   text-decoration: underline;
@@ -628,10 +634,6 @@ input[type="range"] {
     white-space: normal;
     line-height: 1.25;
     min-height: 32px;
-  }
-  .review-button span {
-    font-size: 16px;
-    margin-left: 0;
   }
   .site-footer {
     margin-top: 90px;

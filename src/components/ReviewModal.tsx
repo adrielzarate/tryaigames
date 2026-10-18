@@ -1,3 +1,4 @@
+import { ArrowIcon } from "./ArrowIcon";
 import { useState } from "react";
 import DOMPurify from "dompurify";
 import { imageUrl, type Project } from "../lib/model";
@@ -95,7 +96,7 @@ export function ReviewModal({
           href={p.url}
           onClick={() => onVisit?.("project", "review_try_it")}
         >
-          Try it! <span aria-hidden="true">↗</span>
+          Try it! <ArrowIcon direction="up-right" />
         </ExternalLink>
       </div>
     </Modal>

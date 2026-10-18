@@ -1,3 +1,4 @@
+import { ArrowIcon } from "./ArrowIcon";
 import { useSyncExternalStore } from "react";
 import type { Project } from "../lib/model";
 import { imageUrl } from "../lib/model";
@@ -73,7 +74,7 @@ export function ProjectCard({
           onClick={(event) => onReview(event.currentTarget)}
           aria-label={`Read review of ${p.title}`}
         >
-          Read review <span aria-hidden="true">→</span>
+          Read review <ArrowIcon />
         </button>
       </div>
     </article>
