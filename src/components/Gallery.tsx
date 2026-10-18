@@ -1,4 +1,4 @@
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
   selectProjects,
   usedCategories,
@@ -6,8 +6,10 @@ import {
   type Project,
 } from "../lib/model";
 import { ProjectCard } from "./ProjectCard";
+import logo from "../assets/logo.svg";
 import { ReviewModal } from "./ReviewModal";
 import { ExternalLink } from "./ExternalLink";
+import { useInputModality } from "../lib/use-input-modality";
 import type { AnalyticsEvent } from "../lib/analytics";
 const colors = [
   "#213643",
@@ -32,6 +34,8 @@ export function Gallery({
   footerExtra?: ReactNode;
   onEvent?: AnalyticsEvent;
 }) {
+  useInputModality();
+  const reviewTrigger = useRef<HTMLButtonElement | null>(null);
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("All");
   const [review, setReview] = useState<Project | null>(null);
@@ -54,8 +58,13 @@ export function Gallery({
       <header className="site-header">
         <div className="brand">
           <h1>
-            Try AI Games
-            <span className="brand-dot" aria-hidden="true" />
+            <img
+              className="brand-logo"
+              src={logo}
+              alt="Try AI Games"
+              width={307}
+              height={59}
+            />
           </h1>
           <p>A curated list of AI Games &amp; Experiences</p>
         </div>
@@ -122,7 +131,8 @@ export function Gallery({
             <ProjectCard
               key={p.id}
               project={p}
-              onReview={() => {
+              onReview={(trigger) => {
+                reviewTrigger.current = trigger;
                 setReview(p);
                 onEvent?.("review_open", { project_id: p.id });
               }}
@@ -185,6 +195,7 @@ export function Gallery({
           key={review.id}
           project={review}
           onClose={() => setReview(null)}
+          returnFocus={reviewTrigger.current}
           onVisit={(destination, source) =>
             onEvent?.(
               destination === "project" ? "project_visit" : "developer_visit",

@@ -4,25 +4,33 @@ export function Modal({
   onClose,
   children,
   wide = false,
+  returnFocus,
 }: {
   title: string;
   onClose: () => void;
   children: ReactNode;
   wide?: boolean;
+  returnFocus?: HTMLElement | null;
 }) {
   const ref = useRef<HTMLDialogElement>(null);
   const closeRef = useRef(onClose);
+  const returnFocusRef = useRef(returnFocus);
   closeRef.current = onClose;
   useEffect(() => {
     const dialog = ref.current!;
-    const previous = document.activeElement as HTMLElement | null;
+    const previous =
+      returnFocusRef.current ?? (document.activeElement as HTMLElement | null);
     const old = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     dialog.showModal();
+    dialog
+      .querySelector<HTMLElement>("[data-modal-initial-focus]")
+      ?.focus({ preventScroll: true });
     return () => {
       dialog.close();
       document.body.style.overflow = old;
-      previous?.focus();
+      if (previous?.isConnected && !dialog.contains(previous))
+        previous.focus({ preventScroll: true });
     };
   }, []);
   return (

@@ -9,7 +9,7 @@ export function ProjectCard({
   onVisit,
 }: {
   project: Project;
-  onReview: () => void;
+  onReview: (trigger: HTMLButtonElement) => void;
   onEdit?: () => void;
   onVisit?: (destination: "project" | "developer") => void;
 }) {
@@ -70,7 +70,7 @@ export function ProjectCard({
         </p>
         <button
           className="review-button"
-          onClick={onReview}
+          onClick={(event) => onReview(event.currentTarget)}
           aria-label={`Read review of ${p.title}`}
         >
           Read review <span aria-hidden="true">→</span>

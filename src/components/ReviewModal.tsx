@@ -6,10 +6,12 @@ import { ExternalLink } from "./ExternalLink";
 export function ReviewModal({
   project: p,
   onClose,
+  returnFocus,
   onVisit,
 }: {
   project: Project;
   onClose: () => void;
+  returnFocus?: HTMLElement | null;
   onVisit?: (destination: "project" | "developer", source: string) => void;
 }) {
   const images = [p.desktop, ...p.gallery];
@@ -25,7 +27,11 @@ export function ReviewModal({
     link.rel = "noopener noreferrer";
   });
   return (
-    <Modal title={`Review: ${p.title}`} onClose={onClose}>
+    <Modal
+      title={`Review: ${p.title}`}
+      onClose={onClose}
+      returnFocus={returnFocus}
+    >
       <header className="modal-header">
         <div>
           <h2>
@@ -46,7 +52,7 @@ export function ReviewModal({
             </ExternalLink>
           </p>
         </div>
-        <button className="button" onClick={onClose} autoFocus>
+        <button className="button" onClick={onClose} data-modal-initial-focus>
           Close
         </button>
       </header>

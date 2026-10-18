@@ -90,21 +90,15 @@ input[type="range"] {
   flex: none;
 }
 .brand h1 {
-  font-size: 38px;
-  line-height: 1.05;
-  letter-spacing: -1.8px;
-  font-weight: 950;
-  position: relative;
+  margin: 0;
+  line-height: 1;
   width: fit-content;
 }
-.brand-dot {
-  width: 7px;
-  height: 7px;
-  background: var(--color-magenta);
-  border-radius: 50%;
-  position: absolute;
-  top: -7px;
-  left: 92px;
+.brand-logo {
+  display: block;
+  width: 280px;
+  max-width: 100%;
+  height: auto;
 }
 .brand p {
   font-size: 13px;
@@ -517,9 +511,6 @@ input[type="range"] {
   .project-grid {
     gap: 42px 32px;
   }
-  .brand h1 {
-    font-size: 40px;
-  }
   .category-button {
     padding: 12px 14px;
   }
@@ -554,9 +545,6 @@ input[type="range"] {
   .category-button {
     padding: 8px 10px;
   }
-  .brand h1 {
-    font-size: 30px;
-  }
 }
 @media (max-width: 767px) {
   .site-shell {
@@ -573,21 +561,18 @@ input[type="range"] {
     gap: 14px;
   }
   .brand h1 {
-    font-size: clamp(23px, 5.7vw, 42px);
-    letter-spacing: -1.3px;
-    white-space: nowrap;
+    flex: 0 1 56%;
+    min-width: 0;
+    max-width: 307px;
+  }
+  .brand-logo {
+    width: 100%;
   }
   .brand p {
     font-size: clamp(9px, 2.3vw, 14px);
     max-width: 38%;
     line-height: 1.2;
     margin: 0;
-  }
-  .brand-dot {
-    width: 5px;
-    height: 5px;
-    left: 25%;
-    top: -5px;
   }
   .discovery {
     display: block;
@@ -755,4 +740,10 @@ input[type="range"] {
   .analytics-actions .button {
     flex: 1;
   }
+}
+
+/* Pointer interaction keeps focus semantics without a keyboard focus ring. */
+:root[data-input-modality="pointer"]
+  :is(a, button, dialog, [tabindex="-1"]):focus-visible {
+  outline: none;
 }
