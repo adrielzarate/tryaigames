@@ -31,7 +31,7 @@ export function AnalyticsPreferences() {
           setOpen(false);
         }}
       >
-        Decline analytics
+        Reject cookies
       </button>
       <button
         className="button button-mint"
@@ -40,7 +40,7 @@ export function AnalyticsPreferences() {
           setOpen(false);
         }}
       >
-        Allow analytics
+        Accept cookies
       </button>
     </div>
   );
