@@ -156,6 +156,36 @@
         }
       ],
       "review": "<p><strong>Chinese Garden</strong> is a delightful little escape into a world of tranquility and traditional Chinese beauty. Wander through a charming 3D garden where nature and architecture come together to create a wonderfully peaceful atmosphere. No missions, no ticking clocks, no pressure — just the simple pleasure of exploring a beautiful virtual space at your own pace. It's the kind of experience that reminds you that sometimes, the best thing a digital world can offer is a quiet moment to get lost in.</p>"
+    },
+    {
+      "id": "98324cd8-907a-44db-9c95-f5031f5a8279",
+      "title": "Aquarium Layout Studio",
+      "url": "https://claude.ai/artifact/YPs8DBv64ozGkzVWwApkxo",
+      "developer": "なちゃっと",
+      "developerUrl": "https://x.com/nachat_dayo",
+      "publishedAt": "2026-10-19T04:32:00.000Z",
+      "categories": [
+        "Interactive 3D"
+      ],
+      "desktop": {
+        "file": "c7f15568-1e21-4de8-89bd-b69f5d2a4d65.webp",
+        "alt": "An aquarium"
+      },
+      "mobile": {
+        "file": "03507103-5b31-4a5f-bfde-09265b5730e9.webp",
+        "alt": "An aquarium"
+      },
+      "gallery": [
+        {
+          "file": "2e3b88aa-4f1d-4561-ba79-1352893d6a80.webp",
+          "alt": "Playing with customization in the aquarium"
+        },
+        {
+          "file": "5070aa62-4968-46de-987f-72efc001a77e.webp",
+          "alt": "Full UI of Aquarium Layout Studio"
+        }
+      ],
+      "review": "<p><strong>Aquarium Layout Studio</strong> is a charming little 3D sandbox that lets you explore the creative side of aquarium design. Experiment with different layouts, arrange your underwater world, and bring it to life with colorful fish swimming around your creation. It's a relaxing mix of creativity and simulation, turning the art of aquascaping into a playful digital experience. Even more impressive? The whole thing was built with AI in just 45 minutes, proving that sometimes a simple idea is all it takes to create something delightful.</p>"
     }
   ]
 }
