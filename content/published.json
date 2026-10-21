@@ -4,7 +4,8 @@
     "Other",
     "Adventure",
     "Racing",
-    "Interactive 3D"
+    "Interactive 3D",
+    "Education"
   ],
   "projects": [
     {
@@ -186,6 +187,37 @@
         }
       ],
       "review": "<p><strong>Aquarium Layout Studio</strong> is a charming little 3D sandbox that lets you explore the creative side of aquarium design. Experiment with different layouts, arrange your underwater world, and bring it to life with colorful fish swimming around your creation. It's a relaxing mix of creativity and simulation, turning the art of aquascaping into a playful digital experience. Even more impressive? The whole thing was built with AI in just 45 minutes, proving that sometimes a simple idea is all it takes to create something delightful.</p>"
+    },
+    {
+      "id": "3c94935b-3770-4ee2-bf55-0b68aa715243",
+      "title": "Learn Arduino",
+      "url": "https://learn-arduino-red.vercel.app/",
+      "developer": "Dilum Sanjaya",
+      "developerUrl": "https://x.com/DilumSanjaya",
+      "publishedAt": "2026-10-20T17:52:00.000Z",
+      "categories": [
+        "Interactive 3D",
+        "Education"
+      ],
+      "desktop": {
+        "file": "cdf225cf-6cd1-496d-a90e-d06172bee6d0.webp",
+        "alt": "Learn Arduino UI"
+      },
+      "mobile": {
+        "file": "b4779815-08d8-4a3a-891c-bab766fe76d5.webp",
+        "alt": "Arduino UNO board"
+      },
+      "gallery": [
+        {
+          "file": "48706456-c207-4e59-8220-4a464a2f2219.webp",
+          "alt": "Arduino with leds"
+        },
+        {
+          "file": "2072a0a9-1eac-4a21-bebf-e3984bd4ad39.webp",
+          "alt": "Arduino with sensors"
+        }
+      ],
+      "review": "<p><strong>Learn Arduino</strong> brings the fascinating world of electronics into an interactive 3D learning experience. Instead of getting lost in complicated diagrams and technical manuals, it makes exploring Arduino feel approachable, visual, and fun. It's a refreshing take on hands-on education, showing how interactive 3D environments can turn complex technical concepts into something engaging and enjoyable to discover.</p>"
     }
   ]
 }
