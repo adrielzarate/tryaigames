@@ -248,6 +248,36 @@
         }
       ],
       "review": "<p><strong>Slop New York</strong> turns Manhattan into a massive 3D playground where the city is yours to explore! Stroll through its iconic streets, hop into a yellow taxi, ride a bike, or take to the skies for a completely different perspective of the Big Apple. From the dazzling lights of Times Square to the towering Empire State Building, there's something exciting about discovering familiar landmarks in this interactive world. Switch between different times of day, experiment with camera angles, or simply cruise around without a destination. It's a delightful mix of urban exploration and open-world freedom, all running right in your browser!</p>"
+    },
+    {
+      "id": "df863a1c-4372-47c2-9172-62c9001b6849",
+      "title": "PIGMENT GP",
+      "url": "https://agnt.gg/pigment-gp",
+      "developer": "Nathan Wilbanks",
+      "developerUrl": "https://x.com/NathanWilbanks_",
+      "publishedAt": "2026-10-21T16:17:00.000Z",
+      "categories": [
+        "Racing"
+      ],
+      "desktop": {
+        "file": "29fd9753-bbbb-468a-8489-70592593ab99.webp",
+        "alt": "The race is going to start"
+      },
+      "mobile": {
+        "file": "951c2635-2d8a-4e6c-8f43-a342e95b88d3.webp",
+        "alt": "The race is going to start"
+      },
+      "gallery": [
+        {
+          "file": "4d313f00-d051-4b9c-bc2b-abda60527df4.webp",
+          "alt": "Race with ASCII render"
+        },
+        {
+          "file": "c9194d0b-d430-4005-9b7d-c5c6aadab837.webp",
+          "alt": "Race as a watercolor paint"
+        }
+      ],
+      "review": "<p><strong>Pigment GP</strong> is a colorful, fast-paced kart racing game with a wonderfully creative twist: every track's art style changes the way you race! Drift through imaginative circuits, unleash powerful boosts, and battle rivals with paint-inspired power-ups in a world where visuals and physics go hand in hand. With 25 tracks, online multiplayer, and even a track builder to design your own racing challenges, there's plenty of room for experimentation and friendly competition. It's a playful blend of arcade racing and artistic creativity that brings a fresh splash of color to the genre!</p>"
     }
   ]
 }
