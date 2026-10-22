@@ -218,6 +218,36 @@
         }
       ],
       "review": "<p><strong>Learn Arduino</strong> brings the fascinating world of electronics into an interactive 3D learning experience. Instead of getting lost in complicated diagrams and technical manuals, it makes exploring Arduino feel approachable, visual, and fun. It's a refreshing take on hands-on education, showing how interactive 3D environments can turn complex technical concepts into something engaging and enjoyable to discover.</p>"
+    },
+    {
+      "id": "d388cc9e-235b-4114-92dd-823e7316ec80",
+      "title": "Slop New York",
+      "url": "https://mrdoob.github.io/slop-newyork/",
+      "developer": "mrdoob",
+      "developerUrl": "https://x.com/mrdoob",
+      "publishedAt": "2026-10-22T07:55:00.000Z",
+      "categories": [
+        "Interactive 3D"
+      ],
+      "desktop": {
+        "file": "e776a227-c30d-46ef-aa19-80b307a164ab.webp",
+        "alt": "A taxi in New York"
+      },
+      "mobile": {
+        "file": "96754dff-8b41-40e2-83cd-bb611ed22b80.webp",
+        "alt": "A taxi in New York"
+      },
+      "gallery": [
+        {
+          "file": "d5ea33a6-8987-4f54-9df6-6d139ec577a4.webp",
+          "alt": "A biker in New York"
+        },
+        {
+          "file": "bbda5014-28fa-4eae-bf46-b777cc0fc10d.webp",
+          "alt": "A helicopter over New York"
+        }
+      ],
+      "review": "<p><strong>Slop New York</strong> turns Manhattan into a massive 3D playground where the city is yours to explore! Stroll through its iconic streets, hop into a yellow taxi, ride a bike, or take to the skies for a completely different perspective of the Big Apple. From the dazzling lights of Times Square to the towering Empire State Building, there's something exciting about discovering familiar landmarks in this interactive world. Switch between different times of day, experiment with camera angles, or simply cruise around without a destination. It's a delightful mix of urban exploration and open-world freedom, all running right in your browser!</p>"
     }
   ]
 }
