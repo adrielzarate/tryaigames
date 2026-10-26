@@ -54,3 +54,7 @@ The scripts in `scripts/` are build tools and are not deployed. Only images refe
 ## Analytics
 
 The site includes optional Google Analytics with visitor consent controls. See [analytics setup and verification](docs/analytics.md) for configuration and measured events.
+
+## A/B testing
+
+The Cloudflare Worker can compare the existing review link with a green button. See [experiment setup, measurement and deployment](docs/experiments.md).

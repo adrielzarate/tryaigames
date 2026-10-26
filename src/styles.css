@@ -754,3 +754,29 @@ input[type="range"] {
   :is(a, button, dialog, [tabindex="-1"]):focus-visible {
   outline: none;
 }
+
+/* Review CTA experiment: the edge assigns the variant before the page renders. */
+html[data-review-experiment="review-cta-v1"][data-review-variant="B"]
+  .site-shell:not(.is-editor)
+  .review-button {
+  background: var(--color-mint);
+  color: var(--color-ink);
+  border: 1.5px solid var(--color-ink);
+  border-radius: 6px;
+  padding: 6px 8px;
+  box-shadow: 2px 2px 0 var(--color-ink);
+  max-width: 100%;
+  min-width: 0;
+  min-height: 32px;
+}
+html[data-review-experiment="review-cta-v1"][data-review-variant="B"]
+  .site-shell:not(.is-editor)
+  .review-button
+  .arrow-icon {
+  color: inherit;
+}
+html[data-review-experiment="review-cta-v1"][data-review-variant="B"]
+  .site-shell:not(.is-editor)
+  .review-button:hover {
+  background: #56efa2;
+}

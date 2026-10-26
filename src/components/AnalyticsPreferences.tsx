@@ -18,8 +18,9 @@ export function AnalyticsPreferences() {
   const details = (
     <p>
       We use optional Google Analytics cookies to understand visits and how the
-      gallery is used. Your search text is not sent. Allow or decline these
-      cookies; you can change your choice here at any time.
+      gallery is used, and an optional cookie to remember which review button
+      design you see during an A/B test. Your search text is not sent. Allow or
+      decline these cookies; you can change your choice here at any time.
     </p>
   );
   const actions = (

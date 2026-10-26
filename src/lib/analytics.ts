@@ -1,3 +1,12 @@
+import {
+  getReviewExperiment,
+  rememberReviewVariant,
+  forgetReviewVariant,
+} from "./experiment-client";
+import {
+  createReviewMeasurement,
+  experimentParameters,
+} from "./review-experiment";
 import { analyticsConfig, isLocalHostname } from "./analytics-config";
 type Parameters = Record<string, string | number>;
 export type AnalyticsEvent = (event: string, parameters?: Parameters) => void;
@@ -23,6 +32,10 @@ let initialized = false;
 let running = false;
 let consent: Consent = null;
 const listeners = new Set<() => void>();
+const experiment = getReviewExperiment();
+const measurement = createReviewMeasurement(experiment, (name, parameters) => {
+  window.gtag?.("event", name, { ...parameters, send_to: config.ga4Id });
+});
 function readConsent(): Consent {
   try {
     const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) ?? "null");
@@ -105,12 +118,15 @@ function start() {
     script.async = true;
     script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`;
     document.head.append(script);
+    rememberReviewVariant(experiment);
+    measurement.expose();
   }
 }
 export function initializeAnalytics() {
   if (!analyticsEnabled || initialized) return;
   initialized = true;
   consent = readConsent();
+  if (consent !== "accepted") forgetReviewVariant();
   start();
   window.addEventListener("storage", (event) => {
     if (event.key !== STORAGE_KEY) return;
@@ -122,6 +138,7 @@ export function initializeAnalytics() {
   notify();
 }
 function stopAndReload() {
+  forgetReviewVariant();
   if (config.ga4Id) window[`ga-disable-${config.ga4Id}`] = true;
   clearAnalyticsCookies();
   // Reload removes provider timers/listeners as well as the script elements.
@@ -141,10 +158,18 @@ export function chooseAnalytics(choice: Exclude<Consent, null>) {
   notify();
   if (choice === "accepted") start();
   else if (running) stopAndReload();
-  else clearAnalyticsCookies();
+  else {
+    forgetReviewVariant();
+    clearAnalyticsCookies();
+  }
 }
 export const trackEvent: AnalyticsEvent = (name, parameters = {}) => {
   if (!analyticsEnabled || consent !== "accepted" || !running || !config.ga4Id)
     return;
-  window.gtag?.("event", name, { ...parameters, send_to: config.ga4Id });
+  window.gtag?.("event", name, {
+    ...parameters,
+    ...experimentParameters(experiment),
+    send_to: config.ga4Id,
+  });
+  if (name === "review_open") measurement.review();
 };

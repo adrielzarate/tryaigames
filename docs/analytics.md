@@ -8,7 +8,7 @@ No account API keys are required. Optionally set `VITE_GA4_MEASUREMENT_ID` at bu
 
 GA4 runs only in production builds on non-local hostnames. The local editing application does not initialize analytics. Loopback previews and `npm run dev` do not load Google Analytics.
 
-The site uses basic consent: the Google script is not requested before the visitor chooses **Allow analytics**. **Decline analytics** leaves it unloaded. The choice is stored locally for 180 days. **Analytics preferences** in the footer lets visitors change their choice. Withdrawing consent disables collection, clears accessible GA cookies and reloads the page to remove Google's running listeners. Advertising storage, advertising user data, advertising personalization and Google Signals remain disabled.
+The site uses basic consent: the Google script is not requested before the visitor chooses **Accept cookies**. **Reject cookies** leaves it unloaded. The choice is stored locally for 180 days. **Analytics preferences** in the footer lets visitors change their choice. Withdrawing consent disables collection, clears accessible GA cookies and reloads the page to remove Google's running listeners. Advertising storage, advertising user data, advertising personalization and Google Signals remain disabled.
 
 Measured interactions after consent:
 
@@ -36,3 +36,5 @@ This site uses Cloudflare's automatic script injection, configured in its dashbo
 5. Use Cloudflare's dashboard to verify its separately installed analytics.
 
 Consent implementation reference: https://developers.google.com/tag-platform/security/guides/consent?consentmode=basic
+
+The review button experiment adds consent-controlled assignment persistence and GA4 exposure/conversion events. See [A/B testing](experiments.md).
